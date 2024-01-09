@@ -17,9 +17,22 @@ const DUMMY_PLACES = [
         },
         creator: "u1",
     },
+    {
+        id: "p2",
+        title: "Empire State Building",
+        description: "One of the most famous skyscrapers in the world",
+        imageUrl:
+            "https://upload.wikimedia.org/wikipedia/commons/1/10/Empire_State_Building_%28aerial_view%29.jpg",
+        address: "20 W 34th St., New York, NY 10001, United States",
+        location: {
+            lat: 40.7484405,
+            lng: -73.9882393,
+        },
+        creator: "u2",
+    },
 ];
 
-const UserPlaces = (props) => {
+const UserPlaces = () => {
     const userId = useParams().userId;
     const loadedPlaces = DUMMY_PLACES.filter(
         (places) => places.creator === userId
